@@ -1,0 +1,116 @@
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* ===== Контейнер ===== */
+header,
+main,
+footer {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+header {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+h1 {
+  margin: 0 0 10px 0;
+}
+
+/* ===== Контакти (Flexbox) ===== */
+address {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-style: normal;
+}
+
+address p {
+  margin: 0;
+  padding: 6px 10px;
+  background-color: #eef2ff;
+  border-radius: 20px;
+}
+
+/* ===== Основна частина (Grid) ===== */
+main {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+/* ===== Секції ===== */
+section {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* ===== Статті ===== */
+article {
+  margin-top: 10px;
+  padding: 10px;
+  border-left: 4px solid #3b82f6;
+  background-color: #f9fafb;
+}
+
+/* ===== Списки ===== */
+ul {
+  padding-left: 20px;
+}
+
+/* ===== Посилання ===== */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  opacity: 0.7;
+}
+
+/* Атрибутний селектор */
+a[href^="mailto:"]::before {
+  content: "✉ ";
+}
+
+a[href^="tel:"]::before {
+  content: "☎ ";
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 900px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  section[aria-labelledby="goal"] {
+    grid-column: 1 / -1;
+  }
+}
