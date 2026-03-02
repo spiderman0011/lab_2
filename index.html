@@ -94,5 +94,38 @@
         <li>Англійська — B1</li>
       </ul>
     </section>
+  </main>
+  
+    <section id="comments-section">
+      <h2>Коментарі попередніх роботодавців</h2>
+    </section>
+
+  <footer>
+    <div id="storage-info"></div>
+  </footer>
+
+  <div id="feedback-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <form action="https://formspree.io/f/mgoljkoe" method="POST">
+        <label for="name">Ім’я:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Номер телефону:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <label for="message">Повідомлення:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Відправити</button>
+      </form>
+    </div>
+  </div>
+
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider round"></span>
+  </label>
+
+  <script src="script.js"></script>
 </body>
 </html>
